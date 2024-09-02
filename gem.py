@@ -29,15 +29,12 @@ GOOGLE_APPLICATION_CREDENTIALS="C:\VS Codex\Python\vanity-434412-af937168868e.js
 import sys
 PROJECT_ID = "vanity-434412"
 LOCATION = "asia-south1"
-if "google.colab" not in sys.modules:
-    import subprocess
-    PROJECT_ID = subprocess.check_output(["gcloud", "config", "get-value", "project"], text=True).strip()
-print(f"Your project ID is: {PROJECT_ID}")
+
 
 
 from vertexai.language_models import TextEmbeddingModel
 from vertexai.vision_models import MultiModalEmbeddingModel
-GOOGLE_API_KEY="AIzaSyDQoJahM227W4N9ms5XWkyyx0TXlJcE50o"
+GOOGLE_API_KEY="--hidden--"
 genai.configure(api_key=GOOGLE_API_KEY)
 
 text_model = GenerativeModel("gemini-1.0-pro")
